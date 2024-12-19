@@ -11,7 +11,10 @@ pluginManagement {
         gradlePluginPortal()
     }
     plugins {
-        kotlin("jvm") version "2.0.20"
+        id("com.android.application") version "8.1.1" // Ajusta según Gradle
+        id("org.jetbrains.kotlin.android") version "1.9.10" // Asegura compatibilidad
+        id("com.google.gms.google-services") version "4.4.2" apply false
+
     }
 }
 plugins {
@@ -22,8 +25,9 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+
     }
 }
 
-rootProject.name = "Practica5"
+rootProject.name = "auraplus"
 include(":app")

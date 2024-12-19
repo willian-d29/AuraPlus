@@ -1,15 +1,12 @@
-// Top-level build file where you can add configuration options common to all sub-projects/modules.
+// Archivo de configuración de nivel superior para todos los módulos del proyecto
 plugins {
-    alias(libs.plugins.android.application) apply false
-    alias(libs.plugins.kotlin.android) apply false
-    alias(libs.plugins.compose.compiler) apply false
-    kotlin("jvm")
+    alias(libs.plugins.android.application) apply false // Android plugin
+    alias(libs.plugins.kotlin.android) apply false // Kotlin para Android
+    id("org.jetbrains.kotlin.kapt") version "1.9.10" apply false
+
+
 }
-dependencies {
-    implementation(kotlin("stdlib-jdk8"))
-}
+
 repositories {
-}
-kotlin {
-    jvmToolchain(8)
+
 }
